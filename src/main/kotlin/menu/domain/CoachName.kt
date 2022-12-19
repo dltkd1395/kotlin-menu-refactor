@@ -10,6 +10,9 @@ class CoachName(private val value: String) {
         require(isNameLength()) { ERROR.format(ERROR_NAME_LENGTH) }
     }
 
+    override fun toString(): String =
+        this.value
+
     private fun isNameLength(): Boolean =
         value.length >= MIN_NAME_LENGTH && value.length <= MAX_NAME_LENGTH
 }
