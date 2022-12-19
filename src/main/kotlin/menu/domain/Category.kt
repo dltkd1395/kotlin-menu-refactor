@@ -13,6 +13,6 @@ enum class Category(val number: Int, val foods: List<String>) {
         fun of(otherNumbewr: Int): Category =
             values().find { category ->
                 category.number.equals(otherNumbewr)
-            } ?: throw IllegalArgumentException(ERROR.format(ERROR_CONTAIN_MENU))
+            } ?: throw IllegalArgumentException(ERROR.format(ERROR_FIND_CATEGORY))
     }
 }
