@@ -11,29 +11,20 @@ class Menus(private val menus: List<Menu>) {
         require(isMenuCount()) { ERROR.format(ERROR_MENU_COUNT) }
     }
 
-    fun removeMenu(category: Category): List<Menu> {
-        var categoryMenus = category.foods.toMutableList()
-        for (menu in menus) {
-            categoryMenus = removeCategoryMenus(categoryMenus, menu)
-        }
-        return categoryMenus.map { food ->
-            Menu(food)
-        }
-    }
+    fun get(): List<Menu> =
+        this.menus
 
-    private fun removeCategoryMenus(
-        categoryMenus: MutableList<String>,
-        menu: Menu
-    ): MutableList<String> {
-        if (categoryMenus.contains(menu.toString())) {
-            categoryMenus.remove(menu.toString())
-        }
-        return categoryMenus
+    fun removeMenu(category: Category): List<String> {
+        val categoryFoods = category.foods.toMutableList()
+        categoryFoods.zip(menus)
+            .map { (categoryMenu, menu) ->
+                if (menu.isSameMenu(categoryMenu)) {
+                    categoryFoods.remove(menu.name)
+                }
+            }
+        return categoryFoods
     }
 
     private fun isMenuCount(): Boolean =
         menus.size in MIN_MENU_COUNT..MAX_MENU_COUNT
-
-    override fun toString(): String =
-        menus.map(Menu::toString).joinToString(" | ")
 }
