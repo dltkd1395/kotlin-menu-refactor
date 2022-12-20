@@ -20,6 +20,7 @@ object InputView {
         println(INPUT_COACH_MENU.format(coachName.toString()))
         return Menus(Console.readLine()
             .split(",")
-            .map { menu -> Menu(menu) })
+            .map { menu -> Menu(menu) }
+        )
     }
 }
