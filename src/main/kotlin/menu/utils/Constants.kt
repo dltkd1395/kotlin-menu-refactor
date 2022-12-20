@@ -1,5 +1,6 @@
 package menu.utils
 
+const val WEEKEND = "월요일, 화요일, 수요일, 목요일, 금요일"
 const val CATEGORY_NAME = "일식, 한식, 중식, 아시안, 양식"
 const val JAPANESE_FOOD = "규동, 우동, 미소시루, 스시, 가츠동, 오니기리, 하이라이스, 라멘, 오코노미야끼"
 const val KOREAN_FOOD = "김밥, 김치찌개, 쌈밥, 된장찌개, 비빔밥, 칼국수, 불고기, 떡볶이, 제육볶음"
@@ -16,6 +17,14 @@ const val MAX_COACH_SIZE = 5
 const val MIN_MENU_COUNT = 0
 const val MAX_MENU_COUNT = 2
 
+const val MIN_RANDOM_NUMBER = 1
+const val MAX_RANDOM_NUMBER = 5
+
 const val INPUT_MENU_RECOMMEND = "점심 메뉴 추천을 시작합니다."
 const val INPUT_COACHES = "코치의 이름을 입력해 주세요. (, 로 구분)"
 const val INPUT_COACH_MENU = "%s(이)가 못 먹는 메뉴를 입력해 주세요."
+
+const val OUTPUT_RESULT = "메뉴 추천 결과입니다."
+const val OUTPUT_WEEKEND = "[ 구분 | %s ]"
+const val OUTPUT_CATEGORY = "[ 카테고리 | %s ]"
+const val OUTPUT_COACH_MENUS = "[ %s | %s ]"
