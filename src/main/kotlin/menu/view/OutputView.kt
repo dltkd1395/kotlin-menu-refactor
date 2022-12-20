@@ -16,8 +16,10 @@ object OutputView {
     }
 
     private fun printCategory() {
-        val weekend = CategoryRepository.weekCategory.map { it.value }.joinToString(" | ")
-        println(OUTPUT_CATEGORY.format(CategoryRepository.weekCategory.map { it.value }.joinToString(" | ")))
+        val week = CategoryRepository.weekCategory
+            .map { category -> category.value }
+            .joinToString(" | ")
+        println(OUTPUT_CATEGORY.format(week))
     }
 
     private fun printCoachMenus() {
