@@ -6,6 +6,8 @@ import menu.domain.Menu
 import menu.domain.Menus
 import menu.repository.CategoryRepository
 import menu.repository.MenuRepository
+import menu.utils.MAX_DAYS_NUMBER
+import menu.utils.MIN_DAYS_NUMBER
 import menu.view.InputView
 
 class RecommendService {
@@ -31,7 +33,7 @@ class RecommendService {
     }
 
     private fun addCoachMenus(coaches: List<CoachName>) {
-        for (i in 0 until 5) {
+        for (i in MIN_DAYS_NUMBER until MAX_DAYS_NUMBER) {
             for (coach in coaches) {
                 addRandomMenu(coach, weekendMenus[coach]?.get(i) ?: listOf())
             }

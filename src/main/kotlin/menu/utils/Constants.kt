@@ -20,6 +20,11 @@ const val MAX_MENU_COUNT = 2
 const val MIN_RANDOM_NUMBER = 1
 const val MAX_RANDOM_NUMBER = 5
 
+const val MAX_CATEGORY_SIZE = 2
+
+const val MIN_DAYS_NUMBER = 0
+const val MAX_DAYS_NUMBER = 5
+
 const val INPUT_MENU_RECOMMEND = "점심 메뉴 추천을 시작합니다."
 const val INPUT_COACHES = "코치의 이름을 입력해 주세요. (, 로 구분)"
 const val INPUT_COACH_MENU = "%s(이)가 못 먹는 메뉴를 입력해 주세요."
